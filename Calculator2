@@ -1,0 +1,69 @@
+Output of program
+
+*****************
+Aryadrj Operation
+*****************
+1.Get file extension name
+2.Date calculator between two dates
+3.Age calculator and check whether your teenager or not
+4.Display your personal details in different line
+5.Check python is executing in whether 32 or 64 bit
+6.Check the length of string
+
+***************************************************
+
+Program->
+
+import struct
+def pcsize():
+ print(struct.calcsize("P") * 8)
+def stringlength(str):
+ count=0
+ for char in str:
+      count+=1
+      print(count)
+def extension(file):
+   return file.split(".")
+def noofday(file,file1):
+   return file-file1
+def personal_detail():
+   name=input("Enter your  name :")
+   age=input("Enter your  age  :")
+   address=input("Ënter address:")
+   print("Name:{}\nAge:{}\nAddress:{}".format(name,age,address))
+print("*****************")
+print("Aryadrj Operation")
+print("*****************")
+print("1.Get file extension name")
+print("2.Date calculator between two dates")
+print("3.Age calculator and check whether your teenager or not")
+print("4.Display your personal details in different line")
+print("5.Check python is executing in whether 32 or 64 bit")
+print("6.Check the length of string")
+print("********************************************************")
+choice=input("Enter your choice : 1| 2 | 3| 4 | ->")
+if choice=="1":
+   filename=input("Enter the filename")
+   ext=extension(filename)
+   print(ext[-1])
+
+if choice=="2":
+   filename=int(input("Enter the date 1 like 2011:"))
+   filename1=int(input("Enter the date 2 :"))
+   filename2=noofday(filename,filename1)
+   print(filename2)
+
+if choice=="3":
+   age=int(input("Enter your year of birth for example~1998 :"))
+   if age>18:
+    print("Your age is :",2018-age,"(You are Adult)")
+   else:
+      print("Your age is :",2018-age,"You are teenager")
+if choice=="4":
+   personal_detail()
+if choice=="5":
+   pcsize()
+if choice=="6":
+   Sl=input("Enter the sentence")
+   Stringl=stringlength(Sl)
+==================================================================
