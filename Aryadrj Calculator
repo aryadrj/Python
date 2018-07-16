@@ -1,0 +1,79 @@
+#THIS PROGRAM IS CREATED BY ARYADRJ
+def add(x, y):
+   return x + y 
+def subtract(x, y):
+   return x - y
+def multiply(x, y):
+   return x * y
+def divide(x, y):
+   return x / y
+def mod(x,y):
+    return x%y
+def cel(fahr):
+    return (fahr-32)*5/9
+def fahr(cel):
+    return  (cel*9/5)+32
+def sqaure(x):
+    return x**0.5
+def prime(num):
+    if num>1:
+        for i in range (2,num):
+            if(num%i)==0:
+                print("not a prime")
+                break
+        else:
+            print("prime number")
+print("******************")
+print("AryaDrj Calculator")
+print("******************")
+print("1.Add")
+print("2.Subtract")
+print("3.Multiply")
+print("4.Divide")
+print("5.mod")
+print("6.Covert celsius to fahrenheit")
+print("7.Covert fahrenheit to celsius")
+print("8.find the sqaure root")
+print("9.Find the number is whether prime or not")
+print("******************************")
+try:
+ choice = input("Enter Your choice(| 1| 2 | 3 | 4 | 5 | 6 | 7 | 8 |):")
+ if choice == '1':
+    num1 = int(input("Enter first number: "))
+    num2 = int(input("Enter second number: "))
+    print(num1,"+",num2,"=", add(num1,num2))
+
+ elif choice == '2':
+    num1 = int(input("Enter first number: "))
+    num2 = int(input("Enter second number: "))
+    print(num1,"-",num2,"=", subtract(num1,num2))
+
+ elif choice == '3':
+    num1 = int(input("Enter first number: "))
+    num2 = int(input("Enter second number: "))
+    print(num1,"*",num2,"=", multiply(num1,num2))
+
+ elif choice == '4':
+    num1 = int(input("Enter first number: "))
+    num2 = int(input("Enter second number: "))
+    print(num1,"/",num2,"=", divide(num1,num2))
+ elif choice=='5':
+    num1 = int(input("Enter first number: "))
+    num2 = int(input("Enter second number: "))
+    print(mod(num1,num2))
+ elif choice=='6':
+    num1 = int(input("Enter celsius to convert to fahrenheit : "))
+    print(cel(num1))
+ elif choice=='7':
+    num1=int(input("Enter fahrenhiet to convert to celsius :"))
+    print(fahr(x,y))
+ elif choice=='8':
+    num1=int(input("Enter the number :"))
+    print(sqaure(num1))
+ elif choice=='9':
+    num1=int(input("Enter the number to check prime or not : "))
+    print(prime(num1))
+ else:
+    print("Ïncorrect input")
+except:
+    print("Divide by zero error")
